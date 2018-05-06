@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^api/post/', include("posts.api.urls", namespace='posts-api')),
 
     #url(r'^posts/$', "<appname>.views.<function_name>"),
-] 
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
