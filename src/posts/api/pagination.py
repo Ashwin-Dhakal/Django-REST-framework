@@ -10,4 +10,4 @@ class PostLimitOffsetPagination(LimitOffsetPagination):
 
 
 class PageNumberPagination(PageNumberPagination):
-    page_size=2
+    page_size= 3
