@@ -24,6 +24,7 @@ from rest_framework.permissions import (
 )
 from .serializers import (
     CommentSerializer,
+    CommentDetailSerializer,
 )
 
 # class PostCreateAPIView(CreateAPIView):
@@ -37,7 +38,8 @@ from .serializers import (
 
 class CommentDetailAPIView(RetrieveAPIView):
     queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
+    serializer_class = CommentDetailSerializer
+    lookup_field = 'pk'
 
 # class PostUpdateAPIView(RetrieveUpdateAPIView):
 #     queryset = Post.objects.all()
